@@ -16,7 +16,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    border: solid 1px #ff0000;
 }
 html {
     scroll-behavior: smooth;
@@ -152,13 +151,11 @@ p{
 }
 
 .informativo :first-child{
-    text-align: center;
     width: 40vw;
     padding: 20px;
 
 }
 .informativo :last-child{
-    text-align: center;
     width: 40vw;
     padding: 20px;
 
@@ -182,8 +179,8 @@ p{
     padding: 20px;    
 }
 #sec-sobre{
-    background-color: rgb(247, 243, 243);
-    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.507);
+    background-color: #fafafa;
+    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 0.24);
     width:100% !important;
     margin-bottom: 20px;
     margin-top: 30px;
