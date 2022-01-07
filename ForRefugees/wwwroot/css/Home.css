@@ -16,7 +16,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-
+    border: solid 1px #ff0000;
 }
 html {
     scroll-behavior: smooth;
@@ -149,14 +149,16 @@ p{
     width: 80vw;
     height: max-content;    
     margin: auto;
-    
 }
+
 .informativo :first-child{
+    text-align: center;
     width: 40vw;
     padding: 20px;
 
 }
 .informativo :last-child{
+    text-align: center;
     width: 40vw;
     padding: 20px;
 

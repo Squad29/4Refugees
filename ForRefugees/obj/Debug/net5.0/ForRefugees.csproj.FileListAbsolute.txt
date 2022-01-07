@@ -493,3 +493,4 @@ C:\Users\Naassom Pedro\Documents\Desenvolvimento\Recode\squad-29\Site Projeto Re
 C:\Users\Naassom Pedro\Documents\Desenvolvimento\Recode\squad-29\Site Projeto Refugees\Site Projeto Refugees\4Refugees\ForRefugees\obj\Debug\net5.0\ref\ForRefugees.dll
 C:\Users\Naassom Pedro\Documents\Desenvolvimento\Recode\squad-29\Site Projeto Refugees\Site Projeto Refugees\4Refugees\ForRefugees\obj\Debug\net5.0\ForRefugees.pdb
 C:\Users\Naassom Pedro\Documents\Desenvolvimento\Recode\squad-29\Site Projeto Refugees\Site Projeto Refugees\4Refugees\ForRefugees\obj\Debug\net5.0\ForRefugees.genruntimeconfig.cache
+C:\Users\Naassom Pedro\Documents\Desenvolvimento\Recode\squad-29\Site Projeto Refugees\Site Projeto Refugees\4Refugees\ForRefugees\bin\Debug\net5.0\Microsoft.VisualStudio.Web.BrowserLink.dll
