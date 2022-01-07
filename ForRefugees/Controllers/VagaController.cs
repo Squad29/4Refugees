@@ -10,22 +10,23 @@ using ForRefugees.Models;
 
 namespace ForRefugees.Controllers
 {
-    public class RefugiadoController : Controller
+    public class VagaController : Controller
     {
         private readonly AppDbContext _context;
 
-        public RefugiadoController(AppDbContext context)
+        public VagaController(AppDbContext context)
         {
             _context = context;
         }
 
-        // GET: Refugiado
+        // GET: Vaga
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Refugiado.ToListAsync());
+            var appDbContext = _context.Vaga.Include(v => v.Contratante);
+            return View(await appDbContext.ToListAsync());
         }
 
-        // GET: Refugiado/Details/5
+        // GET: Vaga/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +34,42 @@ namespace ForRefugees.Controllers
                 return NotFound();
             }
 
-            var refugiado = await _context.Refugiado
+            var vaga = await _context.Vaga
+                .Include(v => v.Contratante)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (refugiado == null)
+            if (vaga == null)
             {
                 return NotFound();
             }
 
-            return View(refugiado);
+            return View(vaga);
         }
 
-        // GET: Refugiado/Create
+        // GET: Vaga/Create
         public IActionResult Create()
         {
+            ViewData["ContratanteId"] = new SelectList(_context.Contratante, "Id", "Nome");
             return View();
         }
 
-        // POST: Refugiado/Create
+        // POST: Vaga/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cidade,Telefone,Estado,Profissao,Nacionalidade,Bio,DataNascimento,ValorHora,Endereco,Bairro")] Refugiado refugiado)
+        public async Task<IActionResult> Create([Bind("Id,ContratanteId,Cargo,Descricao,ValorHora")] Vaga vaga)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(refugiado);
+                _context.Add(vaga);
                 await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Vaga");
+                return RedirectToAction(nameof(Index));
             }
-            return View(refugiado);
+            ViewData["ContratanteId"] = new SelectList(_context.Contratante, "Id", "Nome", vaga.ContratanteId);
+            return View(vaga);
         }
 
-        // GET: Refugiado/Edit/5
+        // GET: Vaga/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +77,23 @@ namespace ForRefugees.Controllers
                 return NotFound();
             }
 
-            var refugiado = await _context.Refugiado.FindAsync(id);
-            if (refugiado == null)
+            var vaga = await _context.Vaga.FindAsync(id);
+            if (vaga == null)
             {
                 return NotFound();
             }
-            return View(refugiado);
+            ViewData["ContratanteId"] = new SelectList(_context.Contratante, "Id", "Nome", vaga.ContratanteId);
+            return View(vaga);
         }
 
-        // POST: Refugiado/Edit/5
+        // POST: Vaga/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cpf,Cidade,Telefone,Estado,Profissao,Nacionalidade,Bio,DataNascimento,ValorHora,Endereco,Bairro")] Refugiado refugiado)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,ContratanteId,Cargo,Descricao,ValorHora")] Vaga vaga)
         {
-            if (id != refugiado.Id)
+            if (id != vaga.Id)
             {
                 return NotFound();
             }
@@ -97,12 +102,12 @@ namespace ForRefugees.Controllers
             {
                 try
                 {
-                    _context.Update(refugiado);
+                    _context.Update(vaga);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!RefugiadoExists(refugiado.Id))
+                    if (!VagaExists(vaga.Id))
                     {
                         return NotFound();
                     }
@@ -113,10 +118,11 @@ namespace ForRefugees.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(refugiado);
+            ViewData["ContratanteId"] = new SelectList(_context.Contratante, "Id", "Nome", vaga.ContratanteId);
+            return View(vaga);
         }
 
-        // GET: Refugiado/Delete/5
+        // GET: Vaga/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +130,31 @@ namespace ForRefugees.Controllers
                 return NotFound();
             }
 
-            var refugiado = await _context.Refugiado
+            var vaga = await _context.Vaga
+                .Include(v => v.Contratante)
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (refugiado == null)
+            if (vaga == null)
             {
                 return NotFound();
             }
 
-            return View(refugiado);
+            return View(vaga);
         }
 
-        // POST: Refugiado/Delete/5
+        // POST: Vaga/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var refugiado = await _context.Refugiado.FindAsync(id);
-            _context.Refugiado.Remove(refugiado);
+            var vaga = await _context.Vaga.FindAsync(id);
+            _context.Vaga.Remove(vaga);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool RefugiadoExists(int id)
+        private bool VagaExists(int id)
         {
-            return _context.Refugiado.Any(e => e.Id == id);
+            return _context.Vaga.Any(e => e.Id == id);
         }
     }
 }

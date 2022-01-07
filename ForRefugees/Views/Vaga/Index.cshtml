@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ForRefugees.Models.Avaliacao>
+﻿@model IEnumerable<ForRefugees.Models.Vaga>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,19 +13,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Positivo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Negativo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.dataAvaliacao)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Contratante)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Refugiado)
+                @Html.DisplayNameFor(model => model.Cargo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ValorHora)
             </th>
             <th></th>
         </tr>
@@ -34,19 +31,16 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Positivo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Negativo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.dataAvaliacao)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Contratante.Nome)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Refugiado.Nome)
+                @Html.DisplayFor(modelItem => item.Cargo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descricao)
+            </td>
+            <td>
+                R$ @Html.DisplayFor(modelItem => item.ValorHora)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

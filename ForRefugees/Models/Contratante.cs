@@ -10,10 +10,17 @@ namespace ForRefugees.Models
         [Key]
         public int Id { get; set; }
         public string Nome { get; set; }
+        [Display(Name = "CPF")]
         public string Cpf { get; set; }
+
+        [Display(Name = "CNPJ")]
         public string Cnpj { get; set; }
         public string Seguimento { get; set; }
+        
+        [Display(Name = "Valor Por Hora")]
         public string ValorHora { get; set; }
+        
+        [Display(Name = "Data de Cadastro")]
         public DateTime DataCadastro { get; set; } = DateTime.Now;
         public string Senha { get; set; }
         public string Email { get; set; }
@@ -25,6 +32,8 @@ namespace ForRefugees.Models
         public string Estado { get; set; }
 
         public virtual List<Avaliacao> Avaliacao { get; set; }
+        public virtual List<Vaga> Vaga { get; set; }
+
 
     }
 }

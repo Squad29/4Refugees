@@ -54,13 +54,13 @@ namespace ForRefugees.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,DataCadastro,Senha,Email,Telefone,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,Senha,Email,Telefone,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
         {
             if (ModelState.IsValid)
             {
                 _context.Add(contratante);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Index", "Refugiado");
             }
             return View(contratante);
         }
@@ -86,7 +86,7 @@ namespace ForRefugees.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,DataCadastro,Senha,Email,Telefone,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,Senha,Email,Telefone,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
         {
             if (id != contratante.Id)
             {

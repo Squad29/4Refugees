@@ -14,5 +14,6 @@ namespace ForRefugees.Data
         public DbSet<Contratante> Contratante { get; set; }
         public DbSet<Refugiado> Refugiado{ get; set; }
         public DbSet<Suporte> Suporte { get; set; }
+        public DbSet<Vaga> Vaga { get; set; }
     }
 }
