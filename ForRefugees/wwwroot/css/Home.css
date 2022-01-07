@@ -11,11 +11,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    /*border: solid 1px #ff0000;*/
 }
 html {
     scroll-behavior: smooth;
@@ -187,6 +188,7 @@ p{
 }
 .sec-parceiros{
     width: 100vw;
+    height: 400px;
 }
 .grid {
 	display: grid;
@@ -219,6 +221,33 @@ p{
     padding-bottom: 40px;
 
 }
+.sec-parceiros {
+    width: 100%;
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+   
+}
+
+.parceiro-avatar {
+    position: relative;
+    width: 160px;
+    height: 160px;
+    margin: 0px 10px 0pc 10px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.24);
+    transition: ease-in-out 0.5s;
+}
+
+    .parceiro-avatar > a > img {
+        position: absolute;
+        width: 160px;
+    }
 
 #contato{   
     max-width: 800px;
