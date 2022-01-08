@@ -17,6 +17,8 @@ namespace ForRefugees.Models
 		public string Cidade { get; set; }
 		public string Telefone { get; set; }
 		public string Estado { get; set; }
+
+		[Display(Name = "Profissão")]
 		public string Profissao { get; set; }
 		public string Nacionalidade { get; set; }
 		public string Bio { get; set; }
@@ -29,6 +31,7 @@ namespace ForRefugees.Models
 
 		[Display(Name = "Valor por Hora")]
 		public string ValorHora { get; set; }
+		[Display(Name = "Endereço")]
 		public string Endereco { get; set; }
 		public string Bairro { get; set; }
 
