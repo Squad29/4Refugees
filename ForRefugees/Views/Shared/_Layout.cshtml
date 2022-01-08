@@ -15,10 +15,11 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm
+ navbar-dark">
             <a class="navbar-brand size-logo" href="#"><img src="./assets/img/logos/logo-large.png" alt="Logotipo For Refugees"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -42,7 +43,7 @@
         </nav>
     </header>
     <div class="container-flex">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
@@ -51,7 +52,7 @@
 
         <footer class="bg-dark text-center text-lg-start">
             <!-- Grid container -->
-            <div class="container p-2">
+            <div class="container pt-3">
                 <!--Grid row-->
                 <div class="row mt-4">
                     <!--Grid column-->
