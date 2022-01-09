@@ -2,12 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\ForRefugees",
-    "\\ForRefugees\\Views\\Home",
     "\\ForRefugees\\wwwroot",
     "\\ForRefugees\\wwwroot\\assets",
     "\\ForRefugees\\wwwroot\\assets\\img",
     "\\ForRefugees\\wwwroot\\assets\\img\\fotos-integrantes"
   ],
-  "SelectedNode": "\\ForRefugees\\ForRefugees.csproj",
+  "SelectedNode": "\\ForRefugees\\appsettings.json",
   "PreviewInSolutionExplorer": false
 }
