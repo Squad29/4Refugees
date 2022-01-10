@@ -54,7 +54,7 @@ namespace ForRefugees.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,Senha,Email,Telefone,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
+        public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,Telefone,Email,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
         {
             if (ModelState.IsValid)
             {
@@ -86,7 +86,7 @@ namespace ForRefugees.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,Senha,Email,Telefone,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nome,Cpf,Cnpj,Seguimento,ValorHora,Telefone,Email,Bio,Endereco,Bairro,Cidade,Estado")] Contratante contratante)
         {
             if (id != contratante.Id)
             {

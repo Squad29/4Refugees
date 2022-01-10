@@ -37,8 +37,10 @@
                                     @Html.DisplayFor(modelItem => item.Descricao)
                                 </p>
                             </div>
-                            <div class="card-footer text-muted d-flex justify-content-around">
-                                 @Html.DisplayFor(modelItem => item.Contratante.Nome)                                 
+                            <div class="card-footer text-muted d-flex justify-content-around flex-wrap">
+                                 @Html.DisplayFor(modelItem => item.Contratante.Nome) |                                  
+                                 @Html.DisplayFor(modelItem => item.Contratante.Telefone) |                               
+                                 @Html.DisplayFor(modelItem => item.Contratante.Email)                                 
                                 <div>
                                     <i class="far fa-edit"></i>
                                     <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
@@ -70,22 +72,3 @@
     });
 </script>
 }
-
-<!--
-                Html.DisplayNameFor(model => model.Contratante)
-
-                Html.DisplayNameFor(model => model.Cargo)
-
-                Html.DisplayNameFor(model => model.Descricao)
-
-                Html.DisplayNameFor(model => model.ValorHora)
-
-                Html.DisplayFor(modelItem => item.Contratante.Nome)
-
-                Html.DisplayFor(modelItem => item.Cargo)
-
-                Html.DisplayFor(modelItem => item.Descricao)
-
-                R$ Html.DisplayFor(modelItem => item.ValorHora)
-
--->

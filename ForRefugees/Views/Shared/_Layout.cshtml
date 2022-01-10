@@ -17,15 +17,14 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-toggleable-sm
- navbar-dark">
-            <a class="navbar-brand size-logo" href="#"><img src="~/assets/img/logos/logo-large.png" alt="Logotipo For Refugees"></a>
+        <nav class="navbar navbar-expand-lg navbar-toggleable-sm navbar-dark">
+            <a class="navbar-brand size-logo" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/assets/img/logos/logo-large.png" alt="Logotipo For Refugees"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse " id="navbarTogglerDemo02">
                 <ul class="navbar-nav m-auto mt-2 mt-lg-0">
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
@@ -39,7 +38,9 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Vaga" asp-action="Index">Vagas</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Suporte" asp-action="Create">Contato</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -61,7 +62,7 @@
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <img id="fot-logo" src="~/assets/img/logos/logo-small.png" class="w-100 img-fluid img-thumbnail" alt="logo for Refuguees">
 
-                        <P class="fot-paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro dignissimos, laudantium corrupti fuga officia repellat inventore et dicta. Iste, voluptates in minima quaerat nesciunt iusto voluptate atque laudantium vitae quos?</P>
+                        <p class="fot-paragrafo text-center">A 4Refugees nasceu da necessidade de criar uma aplicação que impacte verdadeiramente e de forma eficiênte a vida dos refugiados em relação ao mercado de trabalho</p>
                     </div>
                     <!--Grid column-->
                     <!--Grid column-->
@@ -101,7 +102,7 @@
                                 <a href="#moveTo-sobre" class="">Sobre</a>
                             </li>
                             <li>
-                                <a href="#moveTo-contato" class="">Contato</a>
+                                <a asp-area="" asp-controller="Suporte" asp-action="Create" class="">Contato</a>
                             </li>
                         </ul>
                     </div>
@@ -137,9 +138,6 @@
             crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
             integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
 
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>

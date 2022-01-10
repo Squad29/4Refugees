@@ -4,15 +4,16 @@
     ViewData["Title"] = "Editar";
 }
 
-<h3>Editar Cadastro</h3>
-<div>
+<h3 class="ml-3">Editar Cadastro</h3>
+<div class="ml-3 mt-2">
     <a asp-action="Index" class="btn btn-secondary mb-4">Voltar</a>
 </div>
 
-<h6>Atualize o cadastro e clique em Salvar:</h6>
-<hr />
+<h6 class="ml-3">Atualize o cadastro e clique em Salvar:</h6>
+<section class="container-fluid">
+    <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 m-auto mt-3 mb-3">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="card mb-4 shadow-sm bg-white rounded">
@@ -81,11 +82,6 @@
                 <div class="card-header text-center">Informações gerais</div>
                 <div class="card-body">
                     <div class="form-group">
-                        <label asp-for="DataCadastro" class="control-label"></label>
-                        <input asp-for="DataCadastro" class="form-control" />
-                        <span asp-validation-for="DataCadastro" class="text-danger"></span>
-                    </div>
-                    <div class="form-group">
                         <label asp-for="Profissao" class="control-label"></label>
                         <input asp-for="Profissao" class="form-control" />
                         <span asp-validation-for="Profissao" class="text-danger"></span>
@@ -109,6 +105,7 @@
         </form>
     </div>
 </div>
+</section>
 
 
 

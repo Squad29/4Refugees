@@ -1,11 +1,13 @@
 ﻿@model ForRefugees.Models.Vaga
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Detalhes";
 }
 
+<link href="~/css/Index.css" rel="stylesheet"/>
 
-<div class="container-fluid justify-content-center row mt-3 mb-3 ml-auto mr-auto"> 
+
+<div class="container-fluid justify-content-center row mt-3 mb-3 ml-auto mr-auto section-index"> 
 <div class="card col-sm-12 col-lg-6 m-auto "> 
   <div class="card-header d-flex justify-content-center">
     <h4>Vaga</h4>
@@ -19,7 +21,19 @@
             @Html.DisplayNameFor(model => model.Contratante)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Contratante.Id)
+            @Html.DisplayFor(model => model.Contratante.Nome)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contratante.Telefone)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contratante.Telefone)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Contratante.Email)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Contratante.Email)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Cargo)
@@ -42,7 +56,7 @@
     </dl>
 </div>
 <div>
-    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
 </div>
 

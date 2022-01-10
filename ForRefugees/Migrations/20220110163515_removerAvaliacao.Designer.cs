@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForRefugees.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220108133428_eli")]
-    partial class eli
+    [Migration("20220110163515_removerAvaliacao")]
+    partial class removerAvaliacao
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,37 +20,6 @@ namespace ForRefugees.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.12")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-            modelBuilder.Entity("ForRefugees.Models.Avaliacao", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ContratanteId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Negativo")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Positivo")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RefugiadoId")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("dataAvaliacao")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ContratanteId");
-
-                    b.HasIndex("RefugiadoId");
-
-                    b.ToTable("Avaliacao");
-                });
 
             modelBuilder.Entity("ForRefugees.Models.Contratante", b =>
                 {
@@ -117,7 +86,8 @@ namespace ForRefugees.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Bio")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
 
                     b.Property<string>("Cidade")
                         .HasColumnType("nvarchar(max)");
@@ -207,25 +177,6 @@ namespace ForRefugees.Migrations
                     b.ToTable("Vaga");
                 });
 
-            modelBuilder.Entity("ForRefugees.Models.Avaliacao", b =>
-                {
-                    b.HasOne("ForRefugees.Models.Contratante", "Contratante")
-                        .WithMany("Avaliacao")
-                        .HasForeignKey("ContratanteId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("ForRefugees.Models.Refugiado", "Refugiado")
-                        .WithMany("Avaliacao")
-                        .HasForeignKey("RefugiadoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Contratante");
-
-                    b.Navigation("Refugiado");
-                });
-
             modelBuilder.Entity("ForRefugees.Models.Vaga", b =>
                 {
                     b.HasOne("ForRefugees.Models.Contratante", "Contratante")
@@ -239,14 +190,7 @@ namespace ForRefugees.Migrations
 
             modelBuilder.Entity("ForRefugees.Models.Contratante", b =>
                 {
-                    b.Navigation("Avaliacao");
-
                     b.Navigation("Vaga");
-                });
-
-            modelBuilder.Entity("ForRefugees.Models.Refugiado", b =>
-                {
-                    b.Navigation("Avaliacao");
                 });
 #pragma warning restore 612, 618
         }

@@ -60,7 +60,7 @@ namespace ForRefugees.Controllers
             {
                 _context.Add(suporte);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Congrats", "Home");
             }
             return View(suporte);
         }

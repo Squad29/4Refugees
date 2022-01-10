@@ -9,8 +9,6 @@ namespace ForRefugees.Data
         {
 
         }
-
-        public DbSet<Avaliacao> Avaliacao { get; set; }
         public DbSet<Contratante> Contratante { get; set; }
         public DbSet<Refugiado> Refugiado{ get; set; }
         public DbSet<Suporte> Suporte { get; set; }
