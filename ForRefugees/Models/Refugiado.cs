@@ -21,6 +21,8 @@ namespace ForRefugees.Models
 		[Display(Name = "Profissão")]
 		public string Profissao { get; set; }
 		public string Nacionalidade { get; set; }
+
+		[MaxLength(150, ErrorMessage = "The ThumbnailPhotoFileName value cannot exceed 4 characters. ")]
 		public string Bio { get; set; }
 		
 		[Display(Name = "Data de Nascimento")]

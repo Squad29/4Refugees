@@ -7474,31 +7474,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Remakker\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Rafael Moura\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\BackFrontv2\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+      "projectUniqueName": "C:\\Users\\Rafael Moura\\Desktop\\Projeto\\4Refugees\\ForRefugees\\ForRefugees.csproj",
       "projectName": "ForRefugees",
-      "projectPath": "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\BackFrontv2\\4Refugees\\ForRefugees\\ForRefugees.csproj",
-      "packagesPath": "C:\\Users\\Remakker\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\BackFrontv2\\4Refugees\\ForRefugees\\obj\\",
+      "projectPath": "C:\\Users\\Rafael Moura\\Desktop\\Projeto\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+      "packagesPath": "C:\\Users\\Rafael Moura\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael Moura\\Desktop\\Projeto\\4Refugees\\ForRefugees\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Remakker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Rafael Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

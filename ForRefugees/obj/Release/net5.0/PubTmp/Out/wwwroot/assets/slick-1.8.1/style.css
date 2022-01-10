@@ -1,0 +1,28 @@
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 24px;
+  margin: 20px 0;
+
+}
+.galeria{
+ /* margin-left: 50px; */
+ padding: 5px; 
+  width: 80%; 
+ 
+}
+.galeria img{
+  width: 97%;
+  
+}
+.slick-prev:before,
+.slick-next:before {
+  color: rgba(66, 49, 49, 0.5);
+  padding: 10px; 
+
+  
+}
