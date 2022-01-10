@@ -13,3 +13,8 @@ p{
 .dataTables_wrapper {
     width: 100%;
 }
+
+
+.section-index {
+    min-height: 50vh;
+}
