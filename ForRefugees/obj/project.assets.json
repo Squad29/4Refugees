@@ -7474,25 +7474,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Rafael Moura\\.nuget\\packages\\": {}
+    "C:\\Users\\Japa\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Rafael Moura\\Desktop\\Projeto\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+      "projectUniqueName": "C:\\Users\\Japa\\Desktop\\Refugees\\4Refugees\\ForRefugees\\ForRefugees.csproj",
       "projectName": "ForRefugees",
-      "projectPath": "C:\\Users\\Rafael Moura\\Desktop\\Projeto\\4Refugees\\ForRefugees\\ForRefugees.csproj",
-      "packagesPath": "C:\\Users\\Rafael Moura\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Rafael Moura\\Desktop\\Projeto\\4Refugees\\ForRefugees\\obj\\",
+      "projectPath": "C:\\Users\\Japa\\Desktop\\Refugees\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+      "packagesPath": "C:\\Users\\Japa\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Japa\\Desktop\\Refugees\\4Refugees\\ForRefugees\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Rafael Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Japa\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7548,7 +7549,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
