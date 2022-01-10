@@ -3,26 +3,125 @@
 @{
     ViewData["Title"] = "Index";
 }
-<link href="~/css/Index.css" rel="stylesheet"/>
+<link href="~/css/Index.css" rel="stylesheet" />
 
-<h1>Lista de Cadastro</h1>
 
+<h3>Lista de Cadastro</h3>
+
+<section class="container d-flex justify-content-lg-center align-content-center">
+
+    <table id="myTable" class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nome)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cpf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Telefone)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Estado)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Profissao)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nacionalidade)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bio)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataNascimento)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DataCadastro)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ValorHora)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Endereco)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Bairro)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nome)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cpf)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Telefone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estado)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Profissao)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nacionalidade)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataNascimento)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DataCadastro)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ValorHora)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Endereco)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Bairro)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>
 <p>
-    <a asp-action="Create"> Inserir Novo</a>
+    <a asp-action="Create" class="btn btn-primary">Novo Cadastro</a>
 </p>
 
-<section class="card--index container-fluid d-flex justify-content-center align-items-center">
-@foreach (var item in Model) {
-           <div class="card ml-3">
-              <div class="card-body">
-                <h3 class="card-title mb-5">@item.Nome</h3>
-                <h6 class="card-subtitle mb-2 text-muted">@item.DataNascimento.ToString("dd/MM/yyyy")</h6>
-                <h6 class="card-subtitle mb-2 text-muted">@item.Profissao</h6>
-                <p class="card-text text-left">@item.Bio</p>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
-              </div>
-        </div>
- }
-</section>
+@section scripts{
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                language: {
+                    url: "//cdn.datatables.net/plug-ins/1.11.3/i18n/pt_br.json"
+                }
+            });
+
+        });
+    </script>
+}
