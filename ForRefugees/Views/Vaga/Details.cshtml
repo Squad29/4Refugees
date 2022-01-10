@@ -4,10 +4,15 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
 
-<div>
+<div class="container-fluid justify-content-center row mt-3 mb-3 ml-auto mr-auto"> 
+<div class="card col-sm-12 col-lg-6 m-auto "> 
+  <div class="card-header d-flex justify-content-center">
     <h4>Vaga</h4>
+  </div>
+  <div class="card-body">
+    <div>
+    
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -37,6 +42,7 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a class="btn btn-info" asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>
+
