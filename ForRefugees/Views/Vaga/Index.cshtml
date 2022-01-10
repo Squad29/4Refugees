@@ -3,51 +3,89 @@
 @{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+<link href="~/css/Index.css" rel="stylesheet"/>
+<div class="container-fluid d-flex flex-column align-items-center mt-4 mb-4 ">
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Cadastre uma vaga</a>
 </p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Contratante)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cargo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Descricao)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ValorHora)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Contratante.Nome)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Cargo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Descricao)
-            </td>
-            <td>
-                R$ @Html.DisplayFor(modelItem => item.ValorHora)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
+
+<section class="container d-flex justify-content-lg-center align-content-center">
+
+    <table id="myTable" class="container-fluid">
+        <thead style="display: none;">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Cargo)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        <!--CARD INICIO -->
+                        <div class="card text-center">
+                            <div class="card-header">
+                                <strong class="text-capitalize">@Html.DisplayFor(modelItem => item.Cargo)</strong> <BR/>
+                                <div class="text-lowercase text-capitalize"> @Html.DisplayFor(modelItem => item.Contratante.Nome)</div>
+                                Oferta: R$@Html.DisplayFor(modelItem => item.ValorHora),00 (Hora)
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">Descrição do serviço</h5>
+                                <p class="card-text">
+                                    @Html.DisplayFor(modelItem => item.Descricao)
+                                </p>
+                            </div>
+                            <div class="card-footer text-muted d-flex justify-content-around">
+                                 @Html.DisplayFor(modelItem => item.Contratante.Nome)                                 
+                                <div>
+                                    <i class="far fa-edit"></i>
+                                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                                    <i class="far fa-newspaper"></i>
+                                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                                    <i class="far fa-trash-alt"></i>
+                                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</section>
+</div>
+
+@section scripts{
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable({
+            language: {
+                url: "//cdn.datatables.net/plug-ins/1.11.3/i18n/pt_br.json"
+            }
+        });
+
+    });
+</script>
 }
-    </tbody>
-</table>
+
+<!--
+                Html.DisplayNameFor(model => model.Contratante)
+
+                Html.DisplayNameFor(model => model.Cargo)
+
+                Html.DisplayNameFor(model => model.Descricao)
+
+                Html.DisplayNameFor(model => model.ValorHora)
+
+                Html.DisplayFor(modelItem => item.Contratante.Nome)
+
+                Html.DisplayFor(modelItem => item.Cargo)
+
+                Html.DisplayFor(modelItem => item.Descricao)
+
+                R$ Html.DisplayFor(modelItem => item.ValorHora)
+
+-->
