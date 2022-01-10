@@ -23,7 +23,7 @@ namespace ForRefugees.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Congrats()
         {
             return View();
         }

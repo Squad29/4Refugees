@@ -31,7 +31,6 @@ namespace ForRefugees.Models
         public string Cidade { get; set; }
         public string Estado { get; set; }
 
-        public virtual List<Avaliacao> Avaliacao { get; set; }
         public virtual List<Vaga> Vaga { get; set; }
 
 

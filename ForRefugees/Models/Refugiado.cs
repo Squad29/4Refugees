@@ -22,7 +22,7 @@ namespace ForRefugees.Models
 		public string Profissao { get; set; }
 		public string Nacionalidade { get; set; }
 
-		[MaxLength(150, ErrorMessage = "The ThumbnailPhotoFileName value cannot exceed 4 characters. ")]
+		[MaxLength(150, ErrorMessage = "Limite de Caracteres excedido")]
 		public string Bio { get; set; }
 		
 		[Display(Name = "Data de Nascimento")]
@@ -37,6 +37,5 @@ namespace ForRefugees.Models
 		public string Endereco { get; set; }
 		public string Bairro { get; set; }
 
-		public virtual List<Avaliacao> Avaliacao { get; set; }
 	}
 }

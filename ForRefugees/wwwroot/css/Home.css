@@ -20,6 +20,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -72,7 +73,8 @@ footer ul li a :hover {
 
 .nav-link {
     color: #fff !important;
-    transition: ease-in-out 0.6s;
+    border-bottom: 1px solid transparent;
+    transition: ease-in-out 0.3s;
 }
 
 .nav-item :hover {
@@ -85,9 +87,10 @@ footer ul li a :hover {
 }
 
 #slogan {
-    margin: auto;
-    /*transform: translate(-50%, -50%);
-    */
+    height: 100px;
+    margin-top: -50px;
+    top: 50vh;
+    position: absolute;
 }
 
     #slogan p {
@@ -177,7 +180,6 @@ p {
 
 #sec-sobre {
     background-color: #fafafa;
-    box-shadow: 0px 0px 20px 1px rgb(0, 0, 0, 0.24);
     width: 100% !important;
     margin-bottom: 20px;
     margin-top: 30px;
@@ -345,68 +347,69 @@ footer a {
     font-size: 1.5rem;
 }
 
+
 @media (max-width: 768px) {
-    .nav-link {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-
-        .nav-link:hover {
-            border-bottom: 1px solid var(--cor3);
-            border-color: var(--cor3);
-            transition: all .5s;
+        .nav-link {
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
-    .informativo {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: max-content;
-        margin: auto;
-    }
+            .nav-link:hover {
+                border-bottom: 1px solid var(--cor3);
+                border-color: var(--cor3);
+                transition: all .5s;
+            }
 
-        .informativo :first-child {
-            width: 100%;
-            padding: 20px;
-            margin-bottom: 15px;
+        .informativo {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: max-content;
+            margin: auto;
         }
 
-        .informativo :last-child {
-            width: 100%;
-            padding: 0;
-            margin-bottom: 15px;
+            .informativo :first-child {
+                width: 100%;
+                padding: 20px;
+                margin-bottom: 15px;
+            }
+
+            .informativo :last-child {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 15px;
+            }
+
+        .informativo2 {
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: max-content;
+            margin: auto;
         }
 
-    .informativo2 {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: max-content;
-        margin: auto;
-    }
+            .informativo2 :first-child {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 15px;
+            }
 
-        .informativo2 :first-child {
-            width: 100%;
-            padding: 0;
-            margin-bottom: 15px;
+            .informativo2 :last-child {
+                width: 100%;
+                padding: 0;
+                margin-bottom: 15px;
+            }
+
+        #contato {
+            max-width: 90%;
         }
 
-        .informativo2 :last-child {
-            width: 100%;
-            padding: 0;
-            margin-bottom: 15px;
+        .sec-parceiros {
+            justify-content: center;
+            align-items: center;
         }
 
-    #contato {
-        max-width: 90%;
+        .card-container {
+            width: 20rem;
+        }
     }
-
-    .sec-parceiros {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .card-container {
-        width: 20rem;
-    }
-}

@@ -10,6 +10,7 @@ namespace ForRefugees.Models
         public int Id { get; set; }
 
         [ForeignKey("Contratante")]
+        [Display(Name="Contratante")]
         public int ContratanteId { get; set; }
         public virtual Contratante Contratante { get; set; }
 

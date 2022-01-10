@@ -4,44 +4,51 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h3 class="ml-3">Nova Mensagem</h3>
 
-<h4>Suporte</h4>
-<hr />
+<h6 class="ml-3">Preencha os campos abaixo para Enviar a Mensagem:</h6>
+
+<section class="container-fluid">
+    <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-4 m-auto mt-3 mb-3">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="card mb-4 shadow-sm bg-white rounded">
+                <div class="card-header text-center">
+                    Dados para Contato
+                </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label asp-for="nome" class="control-label"></label>
+                            <input asp-for="nome" class="form-control" />
+                            <span asp-validation-for="nome" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="email" class="control-label"></label>
+                            <input asp-for="email" class="form-control" />
+                            <span asp-validation-for="email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="assunto" class="control-label"></label>
+                            <input asp-for="assunto" class="form-control" />
+                            <span asp-validation-for="assunto" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label asp-for="mensagem" class="control-label"></label>
+                            <textarea asp-for="mensagem" class="form-control" rows="3"></textarea>
+                            <span asp-validation-for="mensagem" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
             <div class="form-group">
-                <label asp-for="mensagem" class="control-label"></label>
-                <input asp-for="mensagem" class="form-control" />
-                <span asp-validation-for="mensagem" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="assunto" class="control-label"></label>
-                <input asp-for="assunto" class="form-control" />
-                <span asp-validation-for="assunto" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="email" class="control-label"></label>
-                <input asp-for="email" class="form-control" />
-                <span asp-validation-for="email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="nome" class="control-label"></label>
-                <input asp-for="nome" class="form-control" />
-                <span asp-validation-for="nome" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
+				<input type="submit" value="Criar" class="btn btn-primary" />
+			</div>
         </form>
     </div>
 </div>
+</section>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
