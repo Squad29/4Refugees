@@ -1,0 +1,17 @@
+﻿body {
+
+}
+
+.card--index {
+    min-height: 60vh;
+    flex-wrap: wrap;
+}
+
+.card {
+    max-width: 23rem;
+}
+
+.card-title {
+    font-size: 100%;
+    line-height: 20px;
+}
