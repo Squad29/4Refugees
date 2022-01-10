@@ -4,19 +4,19 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Novo Cadastro</h1>
+<h3>Novo Cadastro</h3>
 <div>
-    <a asp-action="Index" class="btn btn-primary">Voltar</a>
+    <a asp-action="Index" class="btn btn-secondary mb-4">Voltar</a>
 </div>
 
-<h4>Preencha os campos abaixo para cadastro:</h4>
+<h6>Preencha os campos abaixo para cadastro:</h6>
 <hr />
-<div class="row">
+<div class="row ">
     <div class="col-md-4">
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="card">
-                <div class="card-header">
+            <div class="card mb-4 shadow-sm bg-white rounded">
+                <div class="card-header text-center">
                     Dados Pessoais
                 </div>
                 <div class="card-body">
@@ -42,8 +42,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="card-header">Endereço</div>
+            <div class="card mb-4 shadow-sm bg-white rounded">
+                <div class="card-header text-center">Endereço</div>
                 <div class="card-body">
                     <div class="form-group">
                         <label asp-for="Endereco" class="control-label"></label>
@@ -67,13 +67,41 @@
                     </div>
                 </div>
             </div>
+            <div class="card mb-4 shadow-sm bg-white rounded">
+                <div class="card-header text-center">Contato</div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label asp-for="DataCadastro" class="control-label"></label>
+                        <input asp-for="DataCadastro" class="form-control" />
+                        <span asp-validation-for="DataCadastro" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Profissao" class="control-label"></label>
+                        <input asp-for="Profissao" class="form-control" />
+                        <span asp-validation-for="Profissao" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="ValorHora" class="control-label"></label>
+                        <input asp-for="ValorHora" class="form-control" />
+                        <span asp-validation-for="ValorHora" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Bio" class="control-label"></label>                        
+                        <textarea asp-for="Bio" class="form-control" rows="3"></textarea>
+                        <span asp-validation-for="Bio" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+				<input type="submit" value="Criar" class="btn btn-primary" />
+			</div>
+
+
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index" class="btn btn-primary">Voltar</a>
-</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
