@@ -1,17 +1,25 @@
-﻿body {
-
+﻿tr{
+    width: 100%;
+    margin-top: 20px;
+    width: 100%;
+}
+tr td{
+    text-align: justify;
+    width: 100%;
+}
+p{
+    font-size: 12px !important;
+}
+.dataTables_wrapper {
+    width: 100%;
 }
 
-.card--index {
-    min-height: 60vh;
-    flex-wrap: wrap;
-}
 
-.card {
-    max-width: 23rem;
+.section-index {
+    min-height: 50vh;
 }
 
 .card-title {
-    font-size: 100%;
-    line-height: 20px;
+    font-size: 1rem;
+    margin: 5px 0 5px 0 !important;
 }

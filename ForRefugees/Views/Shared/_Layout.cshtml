@@ -44,7 +44,7 @@
             </div>
         </nav>
     </header>
-    <div class="container-flex">
+    <div class="container-fluid">
         <main role="main">
             @RenderBody()
         </main>
@@ -60,7 +60,6 @@
                     <!--Grid column-->
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <img id="fot-logo" src="~/assets/img/logos/logo-small.png" class="w-100 img-fluid img-thumbnail" alt="logo for Refuguees">
-
                         <p class="fot-paragrafo text-center">A 4Refugees nasceu da necessidade de criar uma aplicação que impacte verdadeiramente e de forma eficiênte a vida dos refugiados em relação ao mercado de trabalho</p>
                     </div>
                     <!--Grid column-->
@@ -110,7 +109,7 @@
                     <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                         <h5 class="text-uppercase">Endereço</h5>
 
-                        <p class=" text-center fot-paragrafo">
+                        <p class="text-center fot-paragrafo">
                             Rua a, 49
                             São Paulo, SP
                             CEP: 2332-345
@@ -127,7 +126,6 @@
             </div>
             <!-- Copyright -->
         </footer>
-
     </div>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -149,7 +147,6 @@
     <script>
         AOS.init();
     </script>
-
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
