@@ -5,7 +5,6 @@
 }
 
 <h3 class="ml-3">Novo Cadastro</h3>
-<p>@ViewBag.date</p>
 <div class="ml-3 mt-2">
     <a asp-action="Index" class="btn btn-secondary mb-4">Voltar</a>
 </div>
@@ -34,9 +33,8 @@
                         <span asp-validation-for="Cpf" class="text-danger"></span>
                     </div>
                     <div class="form-group">
-                        
                         <label asp-for="DataNascimento" class="control-label"></label>
-                        <input asp-for="DataNascimento" type="date" min="1910-01-01" class="form-control" />
+                        <input asp-for="DataNascimento" type="date" min="1910-01-01" class="form-control" id="dataNascimento" onChange="teste()"/>
                         <span asp-validation-for="DataNascimento" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -97,7 +95,7 @@
                 </div>
             </div>
             <div class="form-group">
-				<input type="submit" value="Criar" class="btn btn-primary" />
+				<input type="submit" value="Criar" class="btn btn-primary" id="botao"/>
 			</div>
         </form>
     </div>
@@ -105,6 +103,25 @@
 </section>
 
 
+<script>
+    document.getElementById("botao").disabled = true;
+    const anoHoje = new Date();
+    function teste() {
+        var data = document.getElementById("dataNascimento").valueAsDate;
+        var ano = data.getUTCFullYear();
+        var idade = anoHoje.getFullYear() - ano
+
+        if(idade <= 18){
+            document.getElementById("dataNascimento").style.border = "thin solid red";
+            document.getElementById("dataNascimento").focus();
+
+        }else {
+            document.getElementById("dataNascimento").style.border = "1px solid #ced4da";
+            document.getElementById("botao").disabled = false;
+        }
+
+    }
+</script>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

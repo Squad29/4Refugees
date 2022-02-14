@@ -58,7 +58,7 @@ namespace ForRefugees.Controllers
         {
             DateTime date1 = DateTime.Now;
             date1 = date1.AddYears(-18);
-            ViewBag.date = date1;
+  
             int result = DateTime.Compare(refugiado.DataNascimento, date1);
             if (result <= 0)
             {
@@ -70,7 +70,7 @@ namespace ForRefugees.Controllers
                 }
                 return View(refugiado);
             }
-            return RedirectToAction("Index", "Refugiado");
+            return RedirectToAction("Create", "Refugiado");
         }
 
         // GET: Refugiado/Edit/5
