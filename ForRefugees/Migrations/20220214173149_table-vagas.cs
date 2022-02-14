@@ -47,7 +47,7 @@ namespace ForRefugees.Migrations
                     Profissao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nacionalidade = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Bio = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
-                    DataNascimento = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ValorHora = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Endereco = table.Column<string>(type: "nvarchar(max)", nullable: true),

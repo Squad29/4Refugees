@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForRefugees.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220214154917_table-vagas")]
+    [Migration("20220214173149_table-vagas")]
     partial class tablevagas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -56,13 +56,21 @@ namespace ForRefugees.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cidade,Telefone,Estado,Profissao,Nacionalidade,Bio,DataNascimento,ValorHora,Endereco,Bairro")] Refugiado refugiado)
         {
-            if (ModelState.IsValid)
+            DateTime date1 = DateTime.Now;
+            date1 = date1.AddYears(-18);
+            ViewBag.date = date1;
+            int result = DateTime.Compare(refugiado.DataNascimento, date1);
+            if (result <= 0)
             {
-                _context.Add(refugiado);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Vaga");
+                if (ModelState.IsValid)
+                {
+                    _context.Add(refugiado);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index", "Vaga");
+                }
+                return View(refugiado);
             }
-            return View(refugiado);
+            return RedirectToAction("Index", "Refugiado");
         }
 
         // GET: Refugiado/Edit/5
