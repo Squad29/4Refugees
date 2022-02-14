@@ -26,7 +26,7 @@ namespace ForRefugees.Models
 		public string Bio { get; set; }
 		
 		[Display(Name = "Data de Nascimento")]
-		public DateTime DataNascimento { get; set; }
+		public string DataNascimento { get; set; }
 
 		[Display(Name = "Data de Cadastro")]
 		public DateTime DataCadastro { get; set; } = DateTime.Now;
