@@ -58,7 +58,6 @@ namespace ForRefugees.Controllers
         {
             DateTime date1 = DateTime.Now;
             date1 = date1.AddYears(-18);
-  
             int result = DateTime.Compare(refugiado.DataNascimento, date1);
             if (result <= 0)
             {
@@ -100,26 +99,31 @@ namespace ForRefugees.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            DateTime date1 = DateTime.Now;
+            date1 = date1.AddYears(-18);
+            int result = DateTime.Compare(refugiado.DataNascimento, date1);
+            if (result <= 0)
             {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(refugiado);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RefugiadoExists(refugiado.Id))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(refugiado);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!RefugiadoExists(refugiado.Id))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(refugiado);
         }
