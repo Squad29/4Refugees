@@ -115,10 +115,21 @@ footer ul li a :hover {
     width: 97% !important;
 }
 
-    .galeria img {
-        width: 80%;
-        margin-left: 5%;
+.card-home {
+    margin-left: 20px !important;
+    background-color: #496fdd;
+    height: 10rem;
+}
+
+    .card-home .card-body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
+
+        .card-home .card-body > p {
+            color: #fff;
+        }
 
 .slick-prev:before, .slick-next:before {
     color: rgba(66, 49, 49, 0.5);

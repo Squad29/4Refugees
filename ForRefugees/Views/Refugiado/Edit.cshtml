@@ -32,9 +32,9 @@
                         </div>
                         <div class="form-group">
                             <label asp-for="DataNascimento" class="control-label"></label>
-                            <input asp-for="DataNascimento" type="date" min="1910-01-01" class="form-control"
-                                id="dataNascimento" onChange="teste()" /> <span asp-validation-for="DataNascimento"
-                                class="text-danger"></span>
+                            <input asp-for="DataNascimento" type="date" min="1910-01-01" class="form-control" id="dataNascimento" onChange="teste()" />
+                            <span asp-validation-for="DataNascimento" class="text-danger"></span>
+                            <span id="dataControl"></span>
                         </div>
                         <div class="form-group">
                             <label asp-for="Nacionalidade" class="control-label"></label>
