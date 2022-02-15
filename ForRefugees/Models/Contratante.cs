@@ -14,10 +14,8 @@ namespace ForRefugees.Models
         public string Nome { get; set; }
         
         [Display(Name = "CPF")]
-        [Required]
         public string Cpf { get; set; }
 
-        [Required]
         [Display(Name = "CNPJ")]
         public string Cnpj { get; set; }
 
