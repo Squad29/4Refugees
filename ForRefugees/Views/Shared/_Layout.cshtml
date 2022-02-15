@@ -14,11 +14,6 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Home.css" />
-    <style>
-        .btnFaq{
-            height:50px !important;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -49,13 +44,15 @@
             </div>
         </nav>
     </header>
+         <!-- Extra large modal -->
+    <div class="btnModal" type="button" data-toggle="modal" data-target=".bd-example-modal-xl">Duvidas Frequêntes</div>
+
     <div class="container-fluid">
         <main role="main">
             @RenderBody()
         </main>
     </div>
-        <!-- Extra large modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-xl">Extra large modal</button>
+   
 
     <div class="modal fade bd-example-modal-xl" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-xl">
@@ -64,14 +61,12 @@
               <h1>FAQ</h1>
 
     
-    <div class="accordion" id="accordionExample">
+    <div class="accordion btnFaq" id="accordionExample">
         <div class="card">
         <div class="card-header " id="headingOne">
-            <h2 class="mb-0">
-            <button class="btn btn-link btnFaq" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 Quem são pessoas refugiadas?
             </button>
-            </h2>
         </div>
     
         <div id="collapseOne" class="collapse show text-justify" aria-labelledby="headingOne" data-parent="#accordionExample">
@@ -96,12 +91,12 @@
         </div>
         <div class="card">
         <div class="card-header" id="headingTwo">
-            <h2 class="mb-0">
+
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
             aria-expanded="false" aria-controls="collapseTwo">
             Por que o refugiado busca o Brasil?
             </button>
-            </h2>
+
         </div>
         <div id="collapseTwo" class="collapse text-justify" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body">
@@ -119,13 +114,11 @@
         </div>
         <div class="card">
         <div class="card-header" id="headingThree">
-            <h2 class="mb-0">
             <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" 
             aria-expanded="false" aria-controls="collapseThree">
             Refugiados/as ou solicitantes da condição de refugiado podem trabalhar
             regularmente e obter Carteira de trabalho e Previdência Social?
             </button>
-            </h2>
         </div>
         <div id="collapseThree" class="collapse text-justify" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body">
@@ -141,14 +134,11 @@
         </div>
         <div class="card">
             <div class="card-header" id="headingFour">
-                <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" 
                 aria-expanded="false" aria-controls="collapseFour">
                 Como saber se a situação do refugiado contratado é regular? Qual é a
                 documentação do refugiado em situação regular no Brasil?
-                
                 </button>
-                </h2>
             </div>
             <div id="collapseFour" class="collapse text-justify" aria-labelledby="headingFour" data-parent="#accordionExample">
                 <div class="card-body">
@@ -170,14 +160,12 @@
         </div>
         <div class="card">
             <div class="card-header" id="headingFive">
-                <h2 class="mb-0">
                 <button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseFive" 
                 aria-expanded="false" aria-controls="collapseFive">
                 Como funciona a renovação do Protocolo de Solicitação de Refúgio? <br>Caso
                 minha empresa receba um alerta a respeito da validade deste documento, com
                 qual período de antecedência é necessário solicitar a renovação?
                 </button>
-                </h2>
             </div>
             <div id="collapseFive" class="collapse text-justify" aria-labelledby="headingFive" data-parent="#accordionExample">
                 <div class="card-body">
@@ -195,13 +183,11 @@
         </div>
         <div class="card">
             <div class="card-header" id="headingSix">
-                <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" 
                 aria-expanded="false" aria-controls="collapseSix">
                 Os refugiados e solicitantes de refúgio podem abrir contas bancárias?
 
                 </button>
-                </h2>
             </div>
             <div id="collapseSix" class="collapse text-justify" aria-labelledby="headingSix" data-parent="#accordionExample">
                 <div class="card-body">
@@ -217,13 +203,11 @@
         </div>
         <div class="card">
             <div class="card-header" id="headingSeven">
-                <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" 
                 aria-expanded="false" aria-controls="collapseSeven">
                 Os refugiados e solicitantes da condição de refugiado podem ser contratados
                 como jovens aprendizes?
                 </button>
-                </h2>
             </div>
             <div id="collapseSeven" class="collapse text-justify" aria-labelledby="headingSeven" data-parent="#accordionExample">
                 <div class="card-body">
@@ -241,13 +225,11 @@
         </div>
         <div class="card">
             <div class="card-header" id="headingEight">
-                <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseEight" 
                 aria-expanded="false" aria-controls="collapseEight">
                 Como proceder caso a pessoa refugiada não possua documentos que
                 comprovem a sua formação escolar/acadêmica?                
                 </button>
-                </h2>
             </div>
             <div id="collapseEight" class="collapse text-justify" aria-labelledby="headingEight" data-parent="#accordionExample">
                 <div class="card-body">
@@ -264,12 +246,10 @@
         </div>        
         <div class="card">
             <div class="card-header" id="headingNine">
-              <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseNine" 
                 aria-expanded="false" aria-controls="collapseNine">
                 Quais benefícios minha empresa terá ao contratar uma pessoa refugiada?
                 </button>
-              </h2>
             </div>
             <div id="collapseNine" class="collapse text-justify" aria-labelledby="headingNine" data-parent="#accordionExample">
               <div class="card-body">
@@ -287,13 +267,11 @@
           </div>
           <div class="card">
             <div class="card-header" id="headingTen">
-              <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTen" 
                 aria-expanded="false" aria-controls="collapseTen">
                 Ao contratar uma pessoa refugiada, minha empresa assume algum ônus ou
                 encargo adicional?
                 </button>
-              </h2>
             </div>
             <div id="collapseTen" class="collapse text-justify" aria-labelledby="headingTen" data-parent="#accordionExample">
               <div class="card-body">
@@ -304,7 +282,6 @@
           </div>
           <div class="card">
             <div class="card-header " id="headingEleven">
-              <h2 class="mb-0">
                 <button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseEleven" 
                 aria-expanded="false" aria-controls="collapseEleven">
                 Para enviar ao eSocial a admissão de um trabalhador estrangeiro refugiado
@@ -312,7 +289,6 @@
                 Documento Provisório de Registro Nacional Migratório ou do Protocolo de
                 Pedido de Refúgio de que trata o art. 21, §1º da Lei nº 9.474/97?
                 </button>
-              </h2>
             </div>
             <div id="collapseEleven" class="collapse text-justify" aria-labelledby="headingEleven" data-parent="#accordionExample">
               <div class="card-body">
@@ -331,13 +307,11 @@
           </div>
           <div class="card">
             <div class="card-header" id="headingTwelve">
-              <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwelve" 
                 aria-expanded="false" aria-controls="collapseTwelve">
                 Como contratar pessoas refugiadas para um serviço temporário no contexto da
                 COVID-19?                
                 </button>
-              </h2>
             </div>
             <div id="collapseTwelve" class="collapse text-justify" aria-labelledby="headingTwelve" data-parent="#accordionExample">
               <div class="card-body">
@@ -356,12 +330,10 @@
           </div>
           <div class="card">
             <div class="card-header" id="headingThirteen">
-              <h2 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThirteen" 
                 aria-expanded="false" aria-controls="collapseThirteen">
                 Cursos gratuitos, onde encontrar?
                 </button>
-              </h2>
             </div>
             <div id="collapseThirteen" class="collapse text-justify" aria-labelledby="headingThirteen" data-parent="#accordionExample">
               <div class="card-body">

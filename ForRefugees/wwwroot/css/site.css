@@ -26,6 +26,26 @@ a {
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
+.btnFaq{
+  height:85vh !important;
+  overflow-y: auto;
+}
+.btnModal{
+  background-color: #0366d6 !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1200;
+}
 
 /* Sticky footer styles
 -------------------------------------------------- */

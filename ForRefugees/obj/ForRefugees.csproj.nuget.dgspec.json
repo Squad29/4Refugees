@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\Back-Front6\\4Refugees\\ForRefugees\\ForRefugees.csproj": {}
+    "C:\\Users\\janil\\Desktop\\4Refugees\\forRefugees\\ForRefugees.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\Back-Front6\\4Refugees\\ForRefugees\\ForRefugees.csproj": {
+    "C:\\Users\\janil\\Desktop\\4Refugees\\forRefugees\\ForRefugees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\Back-Front6\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+        "projectUniqueName": "C:\\Users\\janil\\Desktop\\4Refugees\\forRefugees\\ForRefugees.csproj",
         "projectName": "ForRefugees",
-        "projectPath": "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\Back-Front6\\4Refugees\\ForRefugees\\ForRefugees.csproj",
-        "packagesPath": "C:\\Users\\Remakker\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Remakker\\Desktop\\Eliane\\Squad 29\\Back-Front6\\4Refugees\\ForRefugees\\obj\\",
+        "projectPath": "C:\\Users\\janil\\Desktop\\4Refugees\\forRefugees\\ForRefugees.csproj",
+        "packagesPath": "C:\\Users\\janil\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\janil\\Desktop\\4Refugees\\forRefugees\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Remakker\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\janil\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -73,6 +69,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -81,7 +83,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }
