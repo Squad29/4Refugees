@@ -25,7 +25,5 @@ namespace ForRefugees.Models
         [Display(Name = "Valor por Hora")]
         public string ValorHora { get; set; }
 
-
-
     }
 }

@@ -11,6 +11,6 @@
     <WebStackScaffolding_DbContextTypeFullName>ForRefugees.Data.AppDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
-    <NameOfLastUsedPublishProfile>C:\Users\Rafael Moura\Desktop\Git\4Refugees\ForRefugees\Properties\PublishProfiles\4Ref - Zip Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\Rafael Moura\Desktop\4Refugees\ForRefugees\Properties\PublishProfiles\4Refugeess - Zip Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
