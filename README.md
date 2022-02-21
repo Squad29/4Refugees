@@ -6,6 +6,8 @@ Link da Aplicação : https://forrefuges.azurewebsites.net/
 
 Vídeo Demo Solução - https://www.youtube.com/watch?v=pK15rvf2W3U
 
+Pitch: [3_entrega_-_Slide_Pitch_4_refugees.pdf](https://github.com/Squad29/4Refugees/files/8111666/3_entrega_-_Slide_Pitch_4_refugees.pdf)
+
 ## Sobre o Projeto
 
 O 4Refugees é uma aplicação desenvolvida pelo Squad29 para o projeto RecodePRO2021, visando solucionar a dificuldade de acesso à vagas de emprego do público refugiado no Brasil.
@@ -25,5 +27,10 @@ O 4Refugees é uma aplicação desenvolvida pelo Squad29 para o projeto RecodePR
 5. Como ferramentas de gestão utilizamos o Notion, Trello (com o método SCRUM) e MIRO. 
 
 6. Para nossas reuniões e troca de textos utilizamos Discord, Teams e WhatsApp.
+
+#### Modelagem de Dados
+
+![forRefugees_Logico](https://user-images.githubusercontent.com/95144647/155016001-6fab8f1e-f862-4769-b686-47e3e6dd670f.png)
+![forRefugees_Conceitual](https://user-images.githubusercontent.com/95144647/155016014-76fb9468-a575-4ce2-aef6-553f21c6ac06.png)
 
 
