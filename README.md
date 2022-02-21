@@ -47,10 +47,15 @@ O 4Refugees é uma aplicação desenvolvida pelo Squad29 para o projeto RecodePR
 ### Equipe de Desenvolvimento: Squad 29
 
 Eliane SP Silva | https://github.com/eliane-sp-silva
+
 Janilson Coimbra | https://github.com/JanilsonCoimbra
+
 Naassom Pedro | https://github.com/naassom-pedro/naassom-pedro
+
 Rafael Moura | https://github.com/Rafa-Moura 
+
 Rosana Lopes | https://github.com/RosanaRodriguesLopes 
+
 
 
 
