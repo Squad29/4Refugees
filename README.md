@@ -4,7 +4,7 @@ Para avaliação:
 
 Link da Aplicação : https://forrefuges.azurewebsites.net/
 
-Vídeo Demo Solução - https://www.youtube.com/watch?v=pK15rvf2W3U
+Vídeo Demo Solução: https://www.youtube.com/watch?v=pK15rvf2W3U
 
 Pitch: [3_entrega_-_Slide_Pitch_4_refugees.pdf](https://github.com/Squad29/4Refugees/files/8111666/3_entrega_-_Slide_Pitch_4_refugees.pdf)
 
@@ -32,5 +32,25 @@ O 4Refugees é uma aplicação desenvolvida pelo Squad29 para o projeto RecodePR
 
 ![forRefugees_Logico](https://user-images.githubusercontent.com/95144647/155016001-6fab8f1e-f862-4769-b686-47e3e6dd670f.png)
 ![forRefugees_Conceitual](https://user-images.githubusercontent.com/95144647/155016014-76fb9468-a575-4ce2-aef6-553f21c6ac06.png)
+
+## Orientações de Clone
+
+1. Clonar o repositório https://github.com/Squad29/4Refugees.git
+
+2. Alterar string de conexão com Banco de Dados no arquivo appsettings.json
+
+3. Criar banco de dados SQL Server com o nome forRefugees
+
+4. Abrir console de gerenciador de pacotes utilizar add-migration e update-database
+
+
+### Equipe de Desenvolvimento: Squad 29
+
+Eliane SP Silva | https://github.com/eliane-sp-silva
+Janilson Coimbra | https://github.com/JanilsonCoimbra
+Naassom Pedro | https://github.com/naassom-pedro/naassom-pedro
+Rafael Moura | https://github.com/Rafa-Moura 
+Rosana Lopes | https://github.com/RosanaRodriguesLopes 
+
 
 
