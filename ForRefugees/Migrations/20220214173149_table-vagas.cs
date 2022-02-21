@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace ForRefugees.Migrations
 {
-    public partial class versao01 : Migration
+    public partial class tablevagas : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -46,7 +46,7 @@ namespace ForRefugees.Migrations
                     Estado = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Profissao = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Nacionalidade = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Bio = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Bio = table.Column<string>(type: "nvarchar(150)", maxLength: 150, nullable: true),
                     DataNascimento = table.Column<DateTime>(type: "datetime2", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ValorHora = table.Column<string>(type: "nvarchar(max)", nullable: true),
@@ -64,10 +64,10 @@ namespace ForRefugees.Migrations
                 {
                     id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    mensagem = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    assunto = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    email = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    nome = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    mensagem = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    assunto = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    nome = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -75,58 +75,46 @@ namespace ForRefugees.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Avaliacao",
+                name: "Vaga",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Positivo = table.Column<int>(type: "int", nullable: false),
-                    Negativo = table.Column<int>(type: "int", nullable: false),
-                    dataAvaliacao = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ContratanteId = table.Column<int>(type: "int", nullable: false),
-                    RefugiadoId = table.Column<int>(type: "int", nullable: false)
+                    Cargo = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Descricao = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ValorHora = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Avaliacao", x => x.Id);
+                    table.PrimaryKey("PK_Vaga", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Avaliacao_Contratante_ContratanteId",
+                        name: "FK_Vaga_Contratante_ContratanteId",
                         column: x => x.ContratanteId,
                         principalTable: "Contratante",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Avaliacao_Refugiado_RefugiadoId",
-                        column: x => x.RefugiadoId,
-                        principalTable: "Refugiado",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Avaliacao_ContratanteId",
-                table: "Avaliacao",
+                name: "IX_Vaga_ContratanteId",
+                table: "Vaga",
                 column: "ContratanteId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Avaliacao_RefugiadoId",
-                table: "Avaliacao",
-                column: "RefugiadoId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Avaliacao");
+                name: "Refugiado");
 
             migrationBuilder.DropTable(
                 name: "Suporte");
 
             migrationBuilder.DropTable(
-                name: "Contratante");
+                name: "Vaga");
 
             migrationBuilder.DropTable(
-                name: "Refugiado");
+                name: "Contratante");
         }
     }
 }

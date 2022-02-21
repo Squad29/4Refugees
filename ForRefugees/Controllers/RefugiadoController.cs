@@ -56,13 +56,20 @@ namespace ForRefugees.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nome,Cpf,Cidade,Telefone,Estado,Profissao,Nacionalidade,Bio,DataNascimento,ValorHora,Endereco,Bairro")] Refugiado refugiado)
         {
-            if (ModelState.IsValid)
+            DateTime date1 = DateTime.Now;
+            date1 = date1.AddYears(-18);
+            int result = DateTime.Compare(refugiado.DataNascimento, date1);
+            if (result <= 0)
             {
-                _context.Add(refugiado);
-                await _context.SaveChangesAsync();
-                return RedirectToAction("Index", "Vaga");
+                if (ModelState.IsValid)
+                {
+                    _context.Add(refugiado);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction("Index", "Vaga");
+                }
+                return View(refugiado);
             }
-            return View(refugiado);
+            return RedirectToAction("Create", "Refugiado");
         }
 
         // GET: Refugiado/Edit/5
@@ -92,26 +99,31 @@ namespace ForRefugees.Controllers
             {
                 return NotFound();
             }
-
-            if (ModelState.IsValid)
+            DateTime date1 = DateTime.Now;
+            date1 = date1.AddYears(-18);
+            int result = DateTime.Compare(refugiado.DataNascimento, date1);
+            if (result <= 0)
             {
-                try
+                if (ModelState.IsValid)
                 {
-                    _context.Update(refugiado);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!RefugiadoExists(refugiado.Id))
+                    try
                     {
-                        return NotFound();
+                        _context.Update(refugiado);
+                        await _context.SaveChangesAsync();
                     }
-                    else
+                    catch (DbUpdateConcurrencyException)
                     {
-                        throw;
+                        if (!RefugiadoExists(refugiado.Id))
+                        {
+                            return NotFound();
+                        }
+                        else
+                        {
+                            throw;
+                        }
                     }
+                    return RedirectToAction(nameof(Index));
                 }
-                return RedirectToAction(nameof(Index));
             }
             return View(refugiado);
         }

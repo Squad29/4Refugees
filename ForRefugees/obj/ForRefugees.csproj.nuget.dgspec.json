@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Rafael Moura\\Desktop\\Git\\4Refugees\\ForRefugees\\ForRefugees.csproj": {}
+    "C:\\Users\\Rafael Moura\\Desktop\\4Refugees\\ForRefugees\\ForRefugees.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Rafael Moura\\Desktop\\Git\\4Refugees\\ForRefugees\\ForRefugees.csproj": {
+    "C:\\Users\\Rafael Moura\\Desktop\\4Refugees\\ForRefugees\\ForRefugees.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Rafael Moura\\Desktop\\Git\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+        "projectUniqueName": "C:\\Users\\Rafael Moura\\Desktop\\4Refugees\\ForRefugees\\ForRefugees.csproj",
         "projectName": "ForRefugees",
-        "projectPath": "C:\\Users\\Rafael Moura\\Desktop\\Git\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+        "projectPath": "C:\\Users\\Rafael Moura\\Desktop\\4Refugees\\ForRefugees\\ForRefugees.csproj",
         "packagesPath": "C:\\Users\\Rafael Moura\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Rafael Moura\\Desktop\\Git\\4Refugees\\ForRefugees\\obj\\",
+        "outputPath": "C:\\Users\\Rafael Moura\\Desktop\\4Refugees\\ForRefugees\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Rafael Moura\\AppData\\Roaming\\NuGet\\NuGet.Config",

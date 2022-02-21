@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZcT6a1nvn6nSXKpMSQl4mbiYE/snm2t0lvTKZCc5SyXHc1ncyQMoTvDqxuIQXFQSYACbtijqYwOzjU7uD6or/A==",
+  "dgSpecHash": "4QLYn/Lcjqa0Yp4Vrr7REo8L64WICirWGAouNdvmN/QjcUjYtPx/j1C9QEolgFkVH+pkpwCAZY7UH1QUbYqAeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Rafael Moura\\Desktop\\Git\\4Refugees\\ForRefugees\\ForRefugees.csproj",
+  "projectFilePath": "C:\\Users\\Rafael Moura\\Desktop\\4Refugees\\ForRefugees\\ForRefugees.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Rafael Moura\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Rafael Moura\\.nuget\\packages\\microsoft.aspnetcore.hosting.abstractions\\2.2.0\\microsoft.aspnetcore.hosting.abstractions.2.2.0.nupkg.sha512",

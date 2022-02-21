@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ForRefugees.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20220110163515_removerAvaliacao")]
-    partial class removerAvaliacao
+    [Migration("20220214173149_table-vagas")]
+    partial class tablevagas
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -135,15 +135,19 @@ namespace ForRefugees.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("assunto")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("email")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("mensagem")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nome")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("id");
