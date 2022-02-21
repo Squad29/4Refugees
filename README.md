@@ -10,6 +10,8 @@ Vídeo Demo Solução - https://www.youtube.com/watch?v=pK15rvf2W3U
 
 O 4Refugees é uma aplicação desenvolvida pelo Squad29 para o projeto RecodePRO2021, visando solucionar a dificuldade de acesso à vagas de emprego do público refugiado no Brasil.
 
+![img1](https://user-images.githubusercontent.com/95144647/155015740-aa59405e-e576-420c-b4ea-b226778ba0b9.png)
+
 ### Stack Utilizada
 
 1. O back-end da aplicação foi desenvolvido com ASP.NETCORE MVC em sua versão 5.
